@@ -11,11 +11,13 @@
   instructor: "",
   date: datetime.today().display("[month repr:long] [day], [year]"),
   show_toc: false,
+  show_page_numbers: false,
   body,
 ) = {
   set page(
     paper: "a4",
-    margin: (top: 2.5cm, bottom: 2.5cm, left: 2cm, right: 2cm),
+    margin: (top: 2.5cm, bottom: 2.5cm, left: 1.5cm, right: 1.5cm),
+    numbering: if show_page_numbers { "1" } else { none },
   )
 
   set text(
@@ -24,10 +26,10 @@
   )
 
   set heading(numbering: "1.1.")
-  show heading: set block(below: 0.8em, above: 1.2em)
+  show heading: set block(below: 1.2em, above: 1.2em)
   show heading: set text(font: "Noto Serif")
 
-  show raw: set text(font: "Adwaita Mono")
+  show raw: set text(font: "IBM Plex Mono")
   show raw.where(block: false): set text(size: 11pt)
   show raw.where(block: true): set text(size: 10pt)
 
@@ -42,8 +44,11 @@
 
   show table.cell.where(y: 0): strong
   show table: set table(
-    fill: (x, y) => if y == 0 { gray } else { none },
+    fill: (x, y) => if y == 0 { rgb("#E6E6E6") } else { none },
   )
+  show table.cell: set text(size: 10pt)
+  show table.cell: set par(justify: true)
+  // show table.cell: set par(linebreaks: "optimized", justify: true)
 
 
   align(center)[
