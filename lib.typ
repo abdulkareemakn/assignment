@@ -17,7 +17,7 @@
   set page(
     paper: "a4",
     margin: (top: 2.5cm, bottom: 2.5cm, left: 1.5cm, right: 1.5cm),
-    numbering: if show_page_numbers { "1" } else { none },
+    numbering: none,
   )
 
   set text(
@@ -121,6 +121,9 @@
   }
 
   pagebreak()
+
+  set page(numbering: if show_page_numbers { "1" } else { none })
+  counter(page).update(1)
 
   if show_toc {
     outline(

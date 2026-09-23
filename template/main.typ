@@ -12,5 +12,3 @@
   show_toc: false,
   show_page_numbers: false,
 )
-
-#counter(page).update(1)
