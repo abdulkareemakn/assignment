@@ -1,4 +1,4 @@
-#import "@local/assignment:0.2.0": report
+#import "@local/assignment:0.2.1": report
 
 #show: report.with(
   course_code: "",
