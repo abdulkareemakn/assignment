@@ -21,13 +21,13 @@
   )
 
   set text(
-    font: "Noto Serif",
+    font: "Redaction",
     size: 11pt,
   )
 
   set heading(numbering: "1.1.")
   show heading: set block(below: 1.2em, above: 1.2em)
-  show heading: set text(font: "Noto Serif")
+  show heading: set text(font: "Redaction")
 
   show raw: set text(font: "IBM Plex Mono")
   show raw.where(block: false): set text(size: 11pt)

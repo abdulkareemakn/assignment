@@ -10,10 +10,10 @@ From this repository, install the package locally:
 ./install.sh
 ```
 
-This installs `@local/assignment:0.2.1`. Create a new assignment project with Typst:
+This installs `@local/assignment:0.3.0`. Create a new assignment project with Typst:
 
 ```sh
-typst init @local/assignment:0.2.1 my-assignment
+typst init @local/assignment:0.3.0 my-assignment
 ```
 
 Edit `my-assignment/main.typ`, then compile it:
